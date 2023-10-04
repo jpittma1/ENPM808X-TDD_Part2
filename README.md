@@ -1,9 +1,14 @@
 # cpp-boilerplate-v2
 
 # C++ Boilerplate v2 Badges
-![CICD Workflow status](https://github.com/TommyChangUMD/cpp-boilerplate-v2/actions/workflows/run-unit-test-and-upload-codecov.yml/badge.svg) [![codecov](https://codecov.io/gh/TommyChangUMD/cpp-boilerplate-v2/branch/main/graph/badge.svg)](https://codecov.io/gh/TommyChangUMD/cpp-boilerplate-v2) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![CICD Workflow status](https://github.com/Rashmikapu/ENPM808X-Test-Driven-Development/actions/workflows/run-unit-test-and-upload-codecov.yml/badge.svg) [![codecov](https://codecov.io/gh/Rashmikapu/ENPM808X-Test-Driven-Development/branch/main/graph/badge.svg)](https://codecov.io/gh/Rashmikapu/ENPM808X-Test-Driven-Development) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 
+
+Authors :
+
+-- RASHMI KAPU (119461754)
+-- NEHA MADHEKAR
 ## Overview
 
 Simple starter C++ project with:
