@@ -3,9 +3,9 @@
 #include "lib2.hpp"
 #include "../include/pid.hpp"
 
-// TEST(dummy_test, dummy) {
-//   EXPECT_EQ(1, 1);
-// }
+TEST(dummy_test, dummy) {
+  EXPECT_EQ(1, 1);
+}
 
 PID_controller pid_test;
 
