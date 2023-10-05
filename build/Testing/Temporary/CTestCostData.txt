@@ -1,6 +1,0 @@
-dummy_test.dummy 1 0.00326951
-compute.this_should_pass 0 0
-compute.this_should_pass_too 0 0
----
-compute.this_should_pass
-compute.this_should_pass_too
