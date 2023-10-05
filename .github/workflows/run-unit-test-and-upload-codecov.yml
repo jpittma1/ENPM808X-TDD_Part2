@@ -60,14 +60,4 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
           files: ${{github.workspace}}/build/test_coverage.info
           fail_ci_if_error: true # optional (default = false)
-<<<<<<< HEAD
-          verbose: true # optional (default = false)   
-          
-      - name: Upload coverage reports to Codecov
-  	uses: codecov/codecov-action@v3
-  	env:
-    	  CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}        
-=======
-          verbose: true # optional (default = false)           
->>>>>>> eba2e66e5761eacd178c5c44cee510d57cbe0fc5
-      
+          verbose: true # optional (default = false)          
