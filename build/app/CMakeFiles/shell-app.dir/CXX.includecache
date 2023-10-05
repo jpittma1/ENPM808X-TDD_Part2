@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/lib.hpp
+iostream
+-
+
+../libs/lib1/lib1.hpp
+
+../libs/lib2/lib2.hpp
+
+/home/rashmikapu/cpp-boilerplate-v2/app/PID/pid.cpp
+../../include/pid.hpp
+/home/rashmikapu/cpp-boilerplate-v2/include/pid.hpp
+
+/home/rashmikapu/cpp-boilerplate-v2/app/main.cpp
+lib.hpp
+/home/rashmikapu/cpp-boilerplate-v2/app/lib.hpp
+../include/pid.hpp
+/home/rashmikapu/cpp-boilerplate-v2/include/pid.hpp
+lib1.hpp
+/home/rashmikapu/cpp-boilerplate-v2/app/lib1.hpp
+lib2.hpp
+/home/rashmikapu/cpp-boilerplate-v2/app/lib2.hpp
+
+/home/rashmikapu/cpp-boilerplate-v2/include/pid.hpp
+iostream
+-
+

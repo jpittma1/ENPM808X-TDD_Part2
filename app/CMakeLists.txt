@@ -2,6 +2,7 @@
 add_executable(shell-app
   # list of source cpp files:
   main.cpp
+  PID/pid.cpp
   )
 
 # Any include directories needed to build this target.
@@ -23,3 +24,4 @@ target_link_options(shell-app PUBLIC
   --static
   )
   
+  # add_subdirectory(PID)
