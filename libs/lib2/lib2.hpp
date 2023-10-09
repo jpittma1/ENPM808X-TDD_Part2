@@ -1,3 +1,3 @@
-#pragma once
+// #pragma once
 
-float my_function2(float input);
+// float my_function2(float input);

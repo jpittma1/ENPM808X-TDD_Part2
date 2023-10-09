@@ -1,0 +1,1 @@
+/usr/bin/c++   -g --coverage -fprofile-abs-path -g  --static CMakeFiles/shell-app.dir/main.cpp.o CMakeFiles/shell-app.dir/PID/pid.cpp.o  -o shell-app  -lgcov ../libs/lib1/libmyLib1.a ../libs/lib2/libmyLib2.a -lgcov 

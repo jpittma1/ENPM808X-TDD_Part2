@@ -1,0 +1,72 @@
+Start testing: Oct 09 15:42 EDT
+----------------------------------------------------------
+1/2 Testing: compute.this_should_pass
+1/2 Test: compute.this_should_pass
+Command: "/home/rashmikapu/cpp-boilerplate-v2/build/test/cpp-test" "--gtest_filter=compute.this_should_pass" "--gtest_also_run_disabled_tests"
+Directory: /home/rashmikapu/cpp-boilerplate-v2/build/test
+"compute.this_should_pass" start time: Oct 09 15:42 EDT
+Output:
+----------------------------------------------------------
+Note: Google Test filter = compute.this_should_pass
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from compute
+[ RUN      ] compute.this_should_pass
+/home/rashmikapu/cpp-boilerplate-v2/test/test.cpp:24: Failure
+The difference between pid_test.compute(10.0) and 10 is 10, which exceeds 0.2, where
+pid_test.compute(10.0) evaluates to 0,
+10 evaluates to 10, and
+0.2 evaluates to 0.20000000000000001.
+
+[  FAILED  ] compute.this_should_pass (0 ms)
+[----------] 1 test from compute (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] compute.this_should_pass
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"compute.this_should_pass" end time: Oct 09 15:42 EDT
+"compute.this_should_pass" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: compute.this_should_pass_too
+2/2 Test: compute.this_should_pass_too
+Command: "/home/rashmikapu/cpp-boilerplate-v2/build/test/cpp-test" "--gtest_filter=compute.this_should_pass_too" "--gtest_also_run_disabled_tests"
+Directory: /home/rashmikapu/cpp-boilerplate-v2/build/test
+"compute.this_should_pass_too" start time: Oct 09 15:42 EDT
+Output:
+----------------------------------------------------------
+Note: Google Test filter = compute.this_should_pass_too
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from compute
+[ RUN      ] compute.this_should_pass_too
+/home/rashmikapu/cpp-boilerplate-v2/test/test.cpp:27: Failure
+Expected: (pid_test.compute(100.0)) > (25), actual: 0 vs 25
+
+[  FAILED  ] compute.this_should_pass_too (0 ms)
+[----------] 1 test from compute (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] compute.this_should_pass_too
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"compute.this_should_pass_too" end time: Oct 09 15:42 EDT
+"compute.this_should_pass_too" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 09 15:42 EDT

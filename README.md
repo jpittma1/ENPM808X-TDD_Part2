@@ -8,22 +8,15 @@
 Authors :
 
 -- RASHMI KAPU (119461754)
--- NEHA MADHEKAR
-## Overview
+-- NEHA MADHEKAR (119374436)
 
-Simple starter C++ project with:
 
-- CMake
-- GoogleTest
+Instructions to build and run :
 
-## Standard install via command-line
-```bash
-# Download the code:
-  git clone https://github.com/TommyChangUMD/cpp-boilerplate-v2
-  cd cpp-boilerplate-v2
 # Configure the project and generate a native build system:
-  # Must re-run this command whenever any CMakeLists.txt file has been changed.
+  
   cmake -S ./ -B build/
+
 # Compile and build the project:
   # rebuild only files that are modified since the last build
   cmake --build build/
@@ -31,131 +24,30 @@ Simple starter C++ project with:
   cmake --build build/ --clean-first
   # to see verbose output, do:
   cmake --build build/ --verbose
+
 # Run program:
   ./build/app/shell-app
+
 # Run tests:
   cd build/; ctest; cd -
   # or if you have newer cmake
   ctest --test-dir build/
+
 # Build docs:
   cmake --build build/ --target docs
   # open a web browser to browse the doc
   open docs/html/index.html
+
 # Clean
   cmake --build build/ --target clean
+
 # Clean and start over:
   rm -rf build/
 ```
 
 ref: https://cmake.org/cmake/help/latest/manual/cmake.1.html
 
-## Building for code coverage (for assignments beginning in Week 4)
 
-```bash
-# if you don't have gcovr or lcov installed, do:
-  sudo apt-get install gcovr lcov
-# Set the build type to Debug and WANT_COVERAGE=ON
-  cmake -D WANT_COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug -S ./ -B build/
-# Now, do a clean compile, run unit test, and generate the covereage report
-  cmake --build build/ --clean-first --target all test_coverage
-# open a web browser to browse the test coverage report
-  open build/test_coverage/index.html
-
-This generates a index.html page in the build/test_coverage sub-directory that can be viewed locally in a web browser.
-```
-
-You can also get code coverage report for the *shell-app* target, instead of unit test. Repeat the previous 2 steps but with the *app_coverage* target:
-
-``` bash
-# Now, do another clean compile, run shell-app, and generate its covereage report
-  cmake --build build/ --clean-first --target all app_coverage
-# open a web browser to browse the test coverage report
-  open build/app_coverage/index.html
-
-This generates a index.html page in the build/app_coverage sub-directory that can be viewed locally in a web browser.
-```
-
-## How to use GitHub CI to upload coverage report to Codecov
-
-### First, sign up Codecov with you GitHub account.
-
-  https://about.codecov.io/sign-up/
-
-### Enable the repository you want to upload from
-
-After you sign in, you should see a list of your repositories (you may
-have to refresh and reload the page a few times). Enable the one you
-want to receive coverage data from.
-
-### Create a GitHub CI yaml file
-
-See below for the setup of this repo:
-
-https://github.com/TommyChangUMD/cpp-boilerplate-v2/blob/main/.github/workflows/run-unit-test-and-upload-codecov.yml
-
-### Add your Codecov and GitHub CI badge to README.md
-
-Follow the instruction below to copy the badge (in markdown format)
-and paste it at the top of your README.md file.
-
-For example:
-#### CICD Workflow status
-
-https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge
-
-For example,
-
-To generate the CICD badge for this particular repo, I put the line below in this README.md file:
-``` markdown
-![CICD Workflow status](https://github.com/TommyChangUMD/cpp-boilerplate-v2/actions/workflows/run-unit-test-and-upload-codecov.yml/badge.svg)
-```
-![CICD Workflow status](https://github.com/TommyChangUMD/cpp-boilerplate-v2/actions/workflows/run-unit-test-and-upload-codecov.yml/badge.svg)
-
-
-#### Code Coverage Report
-https://docs.codecov.com/docs/status-badges
-
-For example, to generate the Code Coverage badge for this particular repo,  I put the line below in this README.md file:
-``` markdown
-[![codecov](https://codecov.io/gh/TommyChangUMD/cpp-boilerplate-v2/branch/main/graph/badge.svg)](https://codecov.io/gh/TommyChangUMD/cpp-boilerplate-v2)
-```
-
-[![codecov](https://codecov.io/gh/TommyChangUMD/cpp-boilerplate-v2/branch/main/graph/badge.svg)](https://codecov.io/gh/TommyChangUMD/cpp-boilerplate-v2)
-
-
-
-Note: When you click on the codecov badge, you should see the coverage
-report.  You should also see the source file listing.  If not, you may
-need to login your codecov account first.
-
-
-## Working with C++ IDE and LSP
-
-You must set up clangd and use it with the C++ IDE of your choice. Most people use Visual Studio Code, but if you are using some other IDE, be sure to check if it supports the Language Server Protocol (LSP).
-
-ref: https://clangd.llvm.org/installation.html
-
-
-### clangd C++ language server setup
-
-Run the [provided bash script][config-clangd.bash] or manually create the `~/.config/clangd/config.yaml` file with the following content:
-
-[config-clangd.bash]: https://raw.githubusercontent.com/TommyChangUMD/cpp-boilerplate-v2/main/scripts/config-clangd.bash
-
-```
-Diagnostics:
-  UnusedIncludes: Strict
-
-CompileFlags:
-  # Treat code as C++, use C++17 standard, enable more warnings.
-  # Add: [-xc++, -std=c++17, -Wall, -Wno-missing-prototypes]
-  Add: [-std=c++17]
-
-  # Get rid of error [drv_unknown_argument]: Unknown argument: '-fprofile-abs-path'
-  Remove: [-fprofile-abs-path]
-```
-
-This configuration instructs clangd to use C++-17 standard and catch any unused include files.  You are welcome to customize it further.   See https://clangd.llvm.org/config for more info.
 
 ### Visual studio code C++ IDE setup
 

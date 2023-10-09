@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rashmikapu/cpp-boilerplate-v2/app/PID/pid.cpp
+../../include/pid.hpp
+/home/rashmikapu/cpp-boilerplate-v2/include/pid.hpp
+
+/home/rashmikapu/cpp-boilerplate-v2/app/main.cpp
+../include/pid.hpp
+/home/rashmikapu/cpp-boilerplate-v2/include/pid.hpp
+
+/home/rashmikapu/cpp-boilerplate-v2/include/pid.hpp
+iostream
+-
+
