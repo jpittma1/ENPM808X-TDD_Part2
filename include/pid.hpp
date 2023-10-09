@@ -23,6 +23,9 @@ class PID_controller{
   double initial_vel ;  // initial velocity
   double expected_vel ;  // expected velocity
 
+  // Variables for calculating Error
+  double deltaT = 0.01;
+  double prev_error = 0.0;
   
   public :
   /**

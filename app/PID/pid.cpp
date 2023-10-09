@@ -17,8 +17,23 @@
  * @return double 
  */
 double PID_controller::compute(double vel) {
-  // add implementation here
-  return 0.0;
+  double initial_vel = vel;
+  
+  // Proportional Error
+  double error = expected_vel - initial_vel;
+  // Derivative Error
+  double d_error = (error - prev_error)/deltaT;
+  // Integral Error
+  double i_error = prev_error * deltaT + (error - prev_error) * deltaT/2;
+
+  // Solve for output Velocity based on PID Controller
+  double output_vel = Kp * error + Kd * d_error + Ki*(i_error) + initial_vel;
+  
+  // Update Previous Error
+  prev_error = error;
+ 
+  return output_vel;
+  // return 0.0;
 }
 
 /**
