@@ -49,6 +49,31 @@ ref: https://cmake.org/cmake/help/latest/manual/cmake.1.html
 
 
 
+## Building for code coverage (for assignments beginning in Week 4)
+
+```bash
+# if you don't have gcovr or lcov installed, do:
+  sudo apt-get install gcovr lcov
+# Set the build type to Debug and WANT_COVERAGE=ON
+  cmake -D WANT_COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug -S ./ -B build/
+# Now, do a clean compile, run unit test, and generate the covereage report
+  cmake --build build/ --clean-first --target all test_coverage
+# open a web browser to browse the test coverage report
+  open build/test_coverage/index.html
+
+This generates a index.html page in the build/test_coverage sub-directory that can be viewed locally in a web browser.
+```
+
+You can also get code coverage report for the *shell-app* target, instead of unit test. Repeat the previous 2 steps but with the *app_coverage* target:
+
+``` bash
+# Now, do another clean compile, run shell-app, and generate its covereage report
+  cmake --build build/ --clean-first --target all app_coverage
+# open a web browser to browse the test coverage report
+  open build/app_coverage/index.html
+
+This generates a index.html page in the build/app_coverage sub-directory that can be viewed locally in a web browser.
+
 ### Visual studio code C++ IDE setup
 
 Download vscode from https://code.visualstudio.com/docs/?dv=linux64_deb.
