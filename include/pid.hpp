@@ -20,8 +20,8 @@ class PID_controller{
   double Kp; // proportional gain
   double Ki; // integral gain
   double Kd;  // derivative gain
-  double initial_vel ;  // initial velocity
-  double expected_vel ;  // expected velocity
+  double initial_vel = 0.0;  // initial velocity
+  double expected_vel;  // expected velocity
 
   // Variables for calculating Error
   double deltaT = 0.01;
@@ -35,6 +35,15 @@ class PID_controller{
    */
   PID_controller();
 
+  /**
+   * @brief Feedback loop to iterate for PID controller
+   * 
+   * @param setpoint : desired velocity
+   * @param current : current velocity
+   * @return double : new velocity
+   */
+  double calculate_error(double setpoint, double current);
+  
   /**
    * @brief To compute the output of PID controller with the given P,I,D values
    * 
