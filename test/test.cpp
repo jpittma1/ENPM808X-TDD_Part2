@@ -14,10 +14,6 @@
 #include "../include/pid.hpp"
 
 
-// TEST(dummy_test, dummy) {
-//   EXPECT_EQ(1, 1);
-// }
-
 PID_controller pid_test;
 
 TEST(compute, this_should_pass) {

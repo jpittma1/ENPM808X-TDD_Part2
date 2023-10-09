@@ -13,10 +13,6 @@
 #include "../include/pid.hpp"
 
 
-// void function_not_used() {
-//   dummy();
-//   int notUsed = my_function1(3);
-// }
 /**
  * @brief To run all tests written in test.cpp
  * 
