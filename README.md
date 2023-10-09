@@ -11,6 +11,11 @@ Authors :
 -- NEHA MADHEKAR (119374436)
 
 
+## Part 2 Authors
+Driver: Jerry Pittman, Jr. (jpittma1)<br>
+Navigator: Vyshnav Achuthan (Achuthankrishna)
+
+
 Instructions to build and run :
 
 # Configure the project and generate a native build system:
