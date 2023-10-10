@@ -34,15 +34,6 @@ class PID_controller{
    * 
    */
   PID_controller();
-
-  /**
-   * @brief Feedback loop to iterate for PID controller
-   * 
-   * @param setpoint : desired velocity
-   * @param current : current velocity
-   * @return double : new velocity
-   */
-  double calculate_error(double setpoint, double current);
   
   /**
    * @brief To compute the output of PID controller with the given P,I,D values

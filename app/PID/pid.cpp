@@ -11,17 +11,6 @@
 #include "../../include/pid.hpp"
 
 /**
- * @brief Calculates Error for PID Controller
- * 
- * @param setpoint : double
- * @param current : double
- * @return double 
- */
-double PID_controller::calculate_error(double setpoint, double current) {
-  return (setpoint - current);
-}
-
-/**
  * @brief Computes the output of the PID controller
  * 
  * @param vel : double
@@ -31,7 +20,7 @@ double PID_controller::compute(double vel) {
   double current_velocity = initial_vel;
   
   // Proportional Error
-  double error =  calculate_error(vel, current_velocity);
+  double error =  vel - current_velocity;
 
   // Derivative Error
   d_error = (error - prev_error) /deltaT; 
