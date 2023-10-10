@@ -13,7 +13,6 @@
 
 #include "../include/pid.hpp"
 
-
 PID_controller pid_test;
 
 TEST(compute, this_should_pass) {
@@ -22,4 +21,4 @@ TEST(compute, this_should_pass) {
 
 TEST(compute, this_should_pass_too) { 
   ASSERT_GT(pid_test.compute(100.0), 25.0); 
-  }
+}

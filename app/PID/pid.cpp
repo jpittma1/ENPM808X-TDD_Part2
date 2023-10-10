@@ -19,21 +19,28 @@
 double PID_controller::compute(double vel) {
   double current_velocity = initial_vel;
   
-  // Proportional Error
-  double error =  vel - current_velocity;
+  // Feedback Loop to reduce error
+  // int i = 0;
+  int iterations = 300;
+  for (int i  = 0; i < iterations; i++) {
+  // while (i < 200) {
+    // Proportional Error
+    double error =  vel - current_velocity;
 
-  // Derivative Error
-  d_error = (error - prev_error) /deltaT; 
+    // Derivative Error
+    d_error = (error - prev_error) /deltaT; 
 
-  // Integral Error
-  i_error += error * deltaT;
-   
-  // Solve for output Velocity based on PID Controller
-  double output_vel = (Kp * error) + (Ki * i_error) + (Kd * d_error);
-  current_velocity += output_vel;
-	
-  // Update Previous Error
-  prev_error = error;
+    // Integral Error
+    i_error += error * deltaT;
+    
+    // Solve for output Velocity based on PID Controller
+    double output_vel = (Kp * error) + (Ki * i_error) + (Kd * d_error);
+    current_velocity += output_vel;
+    
+    // Update Previous Error
+    prev_error = error;
+    // i++;
+  }
  
   return current_velocity;
 }
@@ -47,13 +54,4 @@ PID_controller::PID_controller() {
   PID_controller::Kd = 0.011;
   PID_controller::Ki = 0.01;
   PID_controller::initial_vel = 0.0;
-}
-
-/**
- * @brief To set the expected velocity
- * 
- * @param expected_result : double
- */
-void PID_controller::set_expected_velocity(double expected_result) {
-  PID_controller::expected_vel = expected_result;
 }

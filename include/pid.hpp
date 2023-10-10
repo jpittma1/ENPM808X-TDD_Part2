@@ -21,7 +21,7 @@ class PID_controller{
   double Ki; // integral gain
   double Kd;  // derivative gain
   double initial_vel = 0.0;  // initial velocity
-  double expected_vel;  // expected velocity
+  // double expected_vel;  // expected velocity
 
   // Variables for calculating Error
   double deltaT = 1.0;
@@ -42,12 +42,5 @@ class PID_controller{
    * @return double : Generated output velocity
    */
   double compute(double vel);
-
-  /**
-   * @brief Set the expected velocity 
-   * 
-   * @param expected_result 
-   */
-  void set_expected_velocity(double expected_result);
 
 };
