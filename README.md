@@ -4,7 +4,7 @@
 
 Part 1:
 Authors :
-Navigator: Neha Nitin Madhekar (NehaMadhekar09)
+Navigator: Neha Nitin Madhekar (NehaMadhekar09) <br>
 Driver: Rashmi Kapu (Rashmikapu)
 
 # UML Diagram
