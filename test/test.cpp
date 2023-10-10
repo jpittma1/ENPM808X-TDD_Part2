@@ -23,5 +23,5 @@ TEST(compute, this_should_pass_too) {
   ASSERT_GT(pid_test.compute(100.0), 25.0); 
 }
 TEST(check, this_should_always_pass) { 
-  ASSERT_GT(pid_test.check(10.0), true); 
+ ASSERT_TRUE(pid_test.check(10.0)); 
 }
