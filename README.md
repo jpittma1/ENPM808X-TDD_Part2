@@ -12,6 +12,7 @@ Authors :
 
 
 ## Part 2 Authors
+[![codecov](https://codecov.io/gh/jpittma1/ENPM808X-TDD_Part2/branch/main/graph/badge.svg)](https://codecov.io/gh/jpittma1/ENPM808X-TDD_Part2)
 Driver: Jerry Pittman, Jr. (jpittma1)<br>
 Navigator: Vyshnav Achuthan (Achuthankrishna)
 
