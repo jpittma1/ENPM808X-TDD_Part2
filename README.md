@@ -11,6 +11,16 @@ Authors :
 # UML Diagram
 ![Alt text](UML/UML1.jpg)
 
+## Part 2 Authors
+[![codecov](https://codecov.io/gh/jpittma1/ENPM808X-TDD_Part2/branch/main/graph/badge.svg)](https://codecov.io/gh/jpittma1/ENPM808X-TDD_Part2)<br>
+Driver: Jerry Pittman, Jr. (jpittma1)<br>
+Navigator: Vyshnav Achuthan (Achuthankrishna)
+
+### TODO: 
+1. UML to repository
+2. add test case to validate PID gain values are real and non-zero
+3. Add a Test case for checkking non-zero values in the pipeline.
+
 Instructions to build and run :
 
 # Configure the project and generate a native build system:
