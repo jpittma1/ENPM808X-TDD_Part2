@@ -15,6 +15,9 @@ Authors :
 Driver: Jerry Pittman, Jr. (jpittma1)<br>
 Navigator: Vyshnav Achuthan (Achuthankrishna)
 
+### TODO: 
+1. UML to repository
+2. validate PID gain values or make a iterative feedback loop (1 of 2 tests fail "this_should_pass")
 
 Instructions to build and run :
 

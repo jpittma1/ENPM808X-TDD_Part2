@@ -1,0 +1,108 @@
+\hypertarget{class_p_i_d__controller}{}\doxysection{PID\+\_\+controller Class Reference}
+\label{class_p_i_d__controller}\index{PID\_controller@{PID\_controller}}
+
+
+\mbox{\hyperlink{class_p_i_d__controller}{PID\+\_\+controller}} class.  
+
+
+
+
+{\ttfamily \#include $<$pid.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_p_i_d__controller_a2f8ff6d65835d5807646f185ac0a4400}{PID\+\_\+controller}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new pid controller object to initialise default parameters for Kp, Ki, Kd, initial velocity. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_p_i_d__controller_a120cb38c44e954aeca71915eb3186356}{compute}} (double vel)
+\begin{DoxyCompactList}\small\item\em To compute the output of PID controller with the given P,I,D values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_i_d__controller_affc9f3a44f34532e3eea28e0ca9f94bf}{set\+\_\+expected\+\_\+velocity}} (double expected\+\_\+result)
+\begin{DoxyCompactList}\small\item\em Set the expected velocity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_p_i_d__controller}{PID\+\_\+controller}} class. 
+
+Definition at line 19 of file pid.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_p_i_d__controller_a2f8ff6d65835d5807646f185ac0a4400}\label{class_p_i_d__controller_a2f8ff6d65835d5807646f185ac0a4400}} 
+\index{PID\_controller@{PID\_controller}!PID\_controller@{PID\_controller}}
+\index{PID\_controller@{PID\_controller}!PID\_controller@{PID\_controller}}
+\doxysubsubsection{\texorpdfstring{PID\_controller()}{PID\_controller()}}
+{\footnotesize\ttfamily PID\+\_\+controller\+::\+PID\+\_\+controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new pid controller object to initialise default parameters for Kp, Ki, Kd, initial velocity. 
+
+Construct a new pid controller\+::pid controller object. 
+
+Definition at line 45 of file pid.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_i_d__controller_a120cb38c44e954aeca71915eb3186356}\label{class_p_i_d__controller_a120cb38c44e954aeca71915eb3186356}} 
+\index{PID\_controller@{PID\_controller}!compute@{compute}}
+\index{compute@{compute}!PID\_controller@{PID\_controller}}
+\doxysubsubsection{\texorpdfstring{compute()}{compute()}}
+{\footnotesize\ttfamily double PID\+\_\+controller\+::compute (\begin{DoxyParamCaption}\item[{double}]{vel }\end{DoxyParamCaption})}
+
+
+
+To compute the output of PID controller with the given P,I,D values. 
+
+Computes the output of the PID controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vel} & \+: Expected final velocity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double \+: Generated output velocity
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em vel} & \+: double \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Definition at line 19 of file pid.\+cpp.
+
+\mbox{\Hypertarget{class_p_i_d__controller_affc9f3a44f34532e3eea28e0ca9f94bf}\label{class_p_i_d__controller_affc9f3a44f34532e3eea28e0ca9f94bf}} 
+\index{PID\_controller@{PID\_controller}!set\_expected\_velocity@{set\_expected\_velocity}}
+\index{set\_expected\_velocity@{set\_expected\_velocity}!PID\_controller@{PID\_controller}}
+\doxysubsubsection{\texorpdfstring{set\_expected\_velocity()}{set\_expected\_velocity()}}
+{\footnotesize\ttfamily void PID\+\_\+controller\+::set\+\_\+expected\+\_\+velocity (\begin{DoxyParamCaption}\item[{double}]{expected\+\_\+result }\end{DoxyParamCaption})}
+
+
+
+Set the expected velocity. 
+
+To set the expected velocity.
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected\+\_\+result} & \\
+\hline
+{\em expected\+\_\+result} & \+: double \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 57 of file pid.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{pid_8hpp}{pid.\+hpp}}\item 
+app/\+PID/\mbox{\hyperlink{pid_8cpp}{pid.\+cpp}}\end{DoxyCompactItemize}

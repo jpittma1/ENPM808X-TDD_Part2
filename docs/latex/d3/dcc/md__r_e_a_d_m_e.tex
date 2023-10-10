@@ -1,0 +1,147 @@
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{C++ Boilerplate v2 Badges}\label{md__r_e_a_d_m_e_autotoc_md1}
+ \href{https://codecov.io/gh/Rashmikapu/ENPM808X-Test-Driven-Development-}{\texttt{ }} \mbox{[}\mbox{]}(LICENSE)
+
+Authors \+:
+
+-- RASHMI KAPU (119461754) -- NEHA MADHEKAR (119374436)\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysubsection{Part 2 Authors}\label{md__r_e_a_d_m_e_autotoc_md2}
+Driver\+: Jerry Pittman, Jr. (jpittma1)~\newline
+ Navigator\+: Vyshnav Achuthan (Achuthankrishna)\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysubsubsection{TODO\+:}\label{md__r_e_a_d_m_e_autotoc_md3}
+
+\begin{DoxyEnumerate}
+\item UML to repository
+\item validate PID gain values or make a iterative feedback loop (1 of 2 tests fail \char`\"{}this\+\_\+should\+\_\+pass\char`\"{})
+\end{DoxyEnumerate}
+
+Instructions to build and run \+:\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{Configure the project and generate a native build system\+:}\label{md__r_e_a_d_m_e_autotoc_md4}
+cmake -\/S ./ -\/B build/\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{Compile and build the project\+:}\label{md__r_e_a_d_m_e_autotoc_md5}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysection{rebuild only files that are modified since the last build}\label{md__r_e_a_d_m_e_autotoc_md6}
+cmake --build build/ \hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysection{or rebuild everything from scracth}\label{md__r_e_a_d_m_e_autotoc_md7}
+cmake --build build/ --clean-\/first \hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysection{to see verbose output, do\+:}\label{md__r_e_a_d_m_e_autotoc_md8}
+cmake --build build/ --verbose\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysection{Run program\+:}\label{md__r_e_a_d_m_e_autotoc_md9}
+./build/app/shell-\/app\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysection{Run tests\+:}\label{md__r_e_a_d_m_e_autotoc_md10}
+cd build/; ctest; cd -\/ \hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysection{or if you have newer cmake}\label{md__r_e_a_d_m_e_autotoc_md11}
+ctest --test-\/dir build/\hypertarget{md__r_e_a_d_m_e_autotoc_md12}{}\doxysection{Build docs\+:}\label{md__r_e_a_d_m_e_autotoc_md12}
+cmake --build build/ --target docs \hypertarget{md__r_e_a_d_m_e_autotoc_md13}{}\doxysection{open a web browser to browse the doc}\label{md__r_e_a_d_m_e_autotoc_md13}
+open docs/html/index.\+html\hypertarget{md__r_e_a_d_m_e_autotoc_md14}{}\doxysection{Clean}\label{md__r_e_a_d_m_e_autotoc_md14}
+cmake --build build/ --target clean\hypertarget{md__r_e_a_d_m_e_autotoc_md15}{}\doxysection{Clean and start over\+:}\label{md__r_e_a_d_m_e_autotoc_md15}
+rm -\/rf build/ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ref: https://cmake.org/cmake/help/latest/manual/cmake.1.html}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\# Building for code coverage (for assignments beginning in Week 4)}
+\DoxyCodeLine{}
+\DoxyCodeLine{```bash}
+\DoxyCodeLine{\# if you don't have gcovr or lcov installed, do:}
+\DoxyCodeLine{  sudo apt-\/get install gcovr lcov}
+\DoxyCodeLine{\# Set the build type to Debug and WANT\_COVERAGE=ON}
+\DoxyCodeLine{  cmake -\/D WANT\_COVERAGE=ON -\/D CMAKE\_BUILD\_TYPE=Debug -\/S ./ -\/B build/}
+\DoxyCodeLine{\# Now, do a clean compile, run unit test, and generate the covereage report}
+\DoxyCodeLine{  cmake -\/-\/build build/ -\/-\/clean-\/first -\/-\/target all test\_coverage}
+\DoxyCodeLine{\# open a web browser to browse the test coverage report}
+\DoxyCodeLine{  open build/test\_coverage/index.html}
+\DoxyCodeLine{}
+\DoxyCodeLine{This generates a index.html page in the build/test\_coverage sub-\/directory that can be viewed locally in a web browser.}
+
+\end{DoxyCode}
+
+
+You can also get code coverage report for the {\itshape shell-\/app} target, instead of unit test. Repeat the previous 2 steps but with the {\itshape app\+\_\+coverage} target\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Now, do another clean compile, run shell-\/app, and generate its covereage report}
+\DoxyCodeLine{  cmake -\/-\/build build/ -\/-\/clean-\/first -\/-\/target all app\_coverage}
+\DoxyCodeLine{\# open a web browser to browse the test coverage report}
+\DoxyCodeLine{  open build/app\_coverage/index.html}
+\DoxyCodeLine{}
+\DoxyCodeLine{This generates a index.html page in the build/app\_coverage sub-\/directory that can be viewed locally in a web browser.}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\#\# Visual studio code C++ IDE setup}
+\DoxyCodeLine{}
+\DoxyCodeLine{Download vscode from https://code.visualstudio.com/docs/?dv=linux64\_deb.}
+\DoxyCodeLine{}
+\DoxyCodeLine{To install and it on your Ubuntu, do}
+\DoxyCodeLine{}
+\DoxyCodeLine{``` bash}
+\DoxyCodeLine{cd \string~/Downloads}
+\DoxyCodeLine{sudo dpkg -\/i code\_1.81.1-\/1691620686\_amd64.deb}
+\DoxyCodeLine{code}
+
+\end{DoxyCode}
+
+
+Now, you must configure it to use clangd. Follow the instructions at \href{https://clangd.llvm.org/installation.html\#editor-plugins}{\texttt{ https\+://clangd.\+llvm.\+org/installation.\+html\#editor-\/plugins}} and look for \char`\"{}\+Visual Studio Code\char`\"{} under the {\ttfamily Editor plugins} section.
+
+See \href{https://github.com/clangd/vscode-clangd}{\texttt{ https\+://github.\+com/clangd/vscode-\/clangd}} for more info.\hypertarget{md__r_e_a_d_m_e_autotoc_md16}{}\doxysubsubsection{Emacs C++ IDE setup}\label{md__r_e_a_d_m_e_autotoc_md16}
+If you use Emacs as your C++ IDE, then install eglot and supporting packages\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(package-\/initialize)}
+\DoxyCodeLine{(add-\/to-\/list 'package-\/archives '("{}melpa"{} . "{}https://melpa.org/packages/"{}))}
+\DoxyCodeLine{(package-\/refresh-\/contents)}
+\DoxyCodeLine{(setq package-\/selected-\/packages '(eglot yasnippet company markdown-\/mode yasnippet-\/snippets cpp-\/auto-\/include))}
+\DoxyCodeLine{(package-\/install-\/selected-\/packages)}
+
+\end{DoxyCode}
+
+
+Add to $\sim$/.emacs\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(require 'eglot)}
+\DoxyCodeLine{(add-\/to-\/list 'eglot-\/server-\/programs '((c++-\/mode c-\/mode) "{}clangd"{}))}
+
+\end{DoxyCode}
+
+
+See \href{https://joaotavora.github.io/eglot/}{\texttt{ https\+://joaotavora.\+github.\+io/eglot/}} for more info.\hypertarget{md__r_e_a_d_m_e_autotoc_md17}{}\doxysubsection{Verify C++ IDE and LSP are working}\label{md__r_e_a_d_m_e_autotoc_md17}
+clangd will automatically run (in the background) when invoked by the IDE. To verify that it\textquotesingle{}s running correctly, you just need to check if the IDE can perform features such as code completion, finding declarations, references, definitions, and symbols, etc.
+
+However, for clangd to work properly, it must ab able to find a file called {\ttfamily compile\+\_\+commands.\+json} somewhere in your source code tree. There are many ways to generate this compilation database file. CMake can generate it for you already (this is done by using {\ttfamily CMAKE\+\_\+\+EXPORT\+\_\+\+COMPILE\+\_\+\+COMMANDS} option). Everytime you invoke the configuration command {\ttfamily cmake -\/S ./ -\/B build/}, cpp-\/boilerplate-\/v2 creates a symbolic link to the {\ttfamily compile\+\_\+commands.\+json} file.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# generate compile\_commands.json}
+\DoxyCodeLine{cmake -\/S ./ -\/B build/}
+\DoxyCodeLine{\# verify compile\_commands.json has been generated}
+\DoxyCodeLine{ls -\/l compile\_commands.json}
+\DoxyCodeLine{cat compile\_commands.json}
+
+\end{DoxyCode}
+
+
+Alternatively, a program called {\ttfamily bear} can also be used to create {\ttfamily compile\+\_\+commands.\+json}, regardless of the C++ build system you are using. It does this by intercepting subsequent command-\/line commands and collecting all C++ compilation flags passed to the compiler. To use this approach, prepend {\ttfamily bear -\/-\/} at the beginning of the build command. For CMake, you can do\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# build compile\_commands.json from scratch}
+\DoxyCodeLine{  bear -\/-\/ cmake -\/-\/build build/ -\/-\/clean-\/first}
+\DoxyCodeLine{\# or, update the existing compile\_commands.json}
+\DoxyCodeLine{  bear -\/-\/append -\/-\/ cmake -\/-\/build build/}
+
+\end{DoxyCode}
+
+
+Either way, this should produce the {\ttfamily compile\+\_\+commands.\+json} file. Now, you can use it with the IDE.\hypertarget{md__r_e_a_d_m_e_autotoc_md18}{}\doxysubsubsection{Visual studio code}\label{md__r_e_a_d_m_e_autotoc_md18}
+
+\begin{DoxyEnumerate}
+\item Open {\ttfamily cpp-\/boilerplate-\/v2/app/main.\+cpp}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Move the cursor to the {\ttfamily dummy()} function call and press the F12 key (or right-\/click-\/$>$Go to Definition). Visual studio code should automatically open {\ttfamily cpp-\/boilerplate-\/v2/include/lib.\+hpp} and place the curse at line 5, where the {\ttfamily dummy} function is defined.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Close the editor, delete the {\ttfamily compile\+\_\+commands.\+json} file and repeat. Verify that {\itshape step 2 does not work anymore}.
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md19}{}\doxysubsubsection{Emacs}\label{md__r_e_a_d_m_e_autotoc_md19}
+
+\begin{DoxyEnumerate}
+\item Open {\ttfamily cpp-\/boilerplate-\/v2/app/main.\+cpp} and start {\ttfamily eglot} if it\textquotesingle{}s not already running.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Move the cursor to the {\ttfamily dummy()} function call and press the {\ttfamily $<$M-\/.$>$} key (or xref-\/find-\/definitions). Emacs should automatically open {\ttfamily cpp-\/boilerplate-\/v2/include/lib.\+hpp} and place the curse at line 5, where the {\ttfamily dummy} function is defined.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Close the editor, delete the {\ttfamily compile\+\_\+commands.\+json} file and repeat. Verify that {\itshape step 2 does not work anymore}. 
+\end{DoxyEnumerate}
