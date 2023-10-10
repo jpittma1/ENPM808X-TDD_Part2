@@ -11,29 +11,14 @@
 #include "../../include/pid.hpp"
 
 /**
- * @brief Feedback loop for PID Controller
+ * @brief Calculates Error for PID Controller
  * 
  * @param setpoint : double
  * @param current : double
  * @return double 
  */
 double PID_controller::calculate_error(double setpoint, double current) {
-  // Proportional Error
-  double error = setpoint - current;
-
-  // Derivative Error
-  double d_error = (error - prev_error)/deltaT; 
-
-  // Integral Error
-  double i_error = prev_error * deltaT + (error - prev_error) * deltaT/2; 
- 
-  // Solve for output Velocity based on PID Controller
-  double output_vel = Kp * error + Kd * d_error + Ki*(i_error) + current;
-
-  // Update Previous Error
-  prev_error = error;
- 
-  return output_vel;
+  return (setpoint - current);
 }
 
 /**
@@ -43,13 +28,23 @@ double PID_controller::calculate_error(double setpoint, double current) {
  * @return double 
  */
 double PID_controller::compute(double vel) {
-  // double expected_vel = vel;
-  int iterations = 1000;
- 
   double current_velocity = initial_vel;
-  for (int i = 0; i < iterations; i++) {
-    current_velocity = calculate_error(vel, current_velocity);
-  }
+  
+  // Proportional Error
+  double error =  calculate_error(vel, current_velocity);
+
+  // Derivative Error
+  d_error = (error - prev_error) /deltaT; 
+
+  // Integral Error
+  i_error += error * deltaT;
+   
+  // Solve for output Velocity based on PID Controller
+  double output_vel = (Kp * error) + (Ki * i_error) + (Kd * d_error);
+  current_velocity += output_vel;
+	
+  // Update Previous Error
+  prev_error = error;
  
   return current_velocity;
 }
