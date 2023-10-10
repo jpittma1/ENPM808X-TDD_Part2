@@ -1,6 +1,7 @@
 /**
  * @file pid.cpp
  * @author Rashmi Kapu (rashmik@umd.edu), Neha Madhekar (nehanm97@umd.edu)
+ * @author Jerry Pittman (jpittma1@umd.edu)
  * @brief To initialise the members variables of the class 'PID_Controller' and implement the member functions
  * @version 0.1
  * @date 2023-10-09
@@ -20,10 +21,8 @@ double PID_controller::compute(double vel) {
   double current_velocity = initial_vel;
   
   // Feedback Loop to reduce error
-  // int i = 0;
   int iterations = 300;
   for (int i  = 0; i < iterations; i++) {
-  // while (i < 200) {
     // Proportional Error
     double error =  vel - current_velocity;
 
@@ -39,7 +38,6 @@ double PID_controller::compute(double vel) {
     
     // Update Previous Error
     prev_error = error;
-    // i++;
   }
  
   return current_velocity;
