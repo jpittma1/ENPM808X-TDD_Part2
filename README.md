@@ -8,6 +8,8 @@ Authors :
 -- RASHMI KAPU (119461754)
 -- NEHA MADHEKAR (119374436)
 
+# UML Diagram
+![Alt text](UML/UML1.jpg)
 
 Instructions to build and run :
 
