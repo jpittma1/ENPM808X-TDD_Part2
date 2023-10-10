@@ -1,5 +1,0 @@
-add_test( compute.this_should_pass /home/rashmikapu/cpp-boilerplate-v2/build/test/cpp-test [==[--gtest_filter=compute.this_should_pass]==] --gtest_also_run_disabled_tests)
-set_tests_properties( compute.this_should_pass PROPERTIES WORKING_DIRECTORY /home/rashmikapu/cpp-boilerplate-v2/build/test)
-add_test( compute.this_should_pass_too /home/rashmikapu/cpp-boilerplate-v2/build/test/cpp-test [==[--gtest_filter=compute.this_should_pass_too]==] --gtest_also_run_disabled_tests)
-set_tests_properties( compute.this_should_pass_too PROPERTIES WORKING_DIRECTORY /home/rashmikapu/cpp-boilerplate-v2/build/test)
-set( cpp-test_TESTS compute.this_should_pass compute.this_should_pass_too)
