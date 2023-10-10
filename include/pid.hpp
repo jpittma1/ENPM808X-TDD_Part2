@@ -1,6 +1,7 @@
 /**
  * @file pid.hpp
  * @author Rashmi Kapu (rashmik@umd.edu), Neha Madhekar (nehanm97@umd.edu)
+* @author Jerry Pittman (jpittma1@umd.edu)
  * @brief To initialise PID controller class and member variables and functions
  * @version 0.1
  * @date 2023-10-09
@@ -21,7 +22,6 @@ class PID_controller{
   double Ki; // integral gain
   double Kd;  // derivative gain
   double initial_vel = 0.0;  // initial velocity
-  // double expected_vel;  // expected velocity
 
   // Variables for calculating Error
   double deltaT = 1.0;
