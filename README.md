@@ -9,13 +9,13 @@ Authors :
 
 
 ## Part 2 Authors
-[![codecov](https://codecov.io/gh/jpittma1/ENPM808X-TDD_Part2/branch/main/graph/badge.svg)](https://codecov.io/gh/jpittma1/ENPM808X-TDD_Part2)
+[![codecov](https://codecov.io/gh/jpittma1/ENPM808X-TDD_Part2/branch/main/graph/badge.svg)](https://codecov.io/gh/jpittma1/ENPM808X-TDD_Part2)<br>
 Driver: Jerry Pittman, Jr. (jpittma1)<br>
 Navigator: Vyshnav Achuthan (Achuthankrishna)
 
 ### TODO: 
 1. UML to repository
-2. validate PID gain values or make a iterative feedback loop (1 of 2 tests fail "this_should_pass")
+2. add test case to validate PID gain values are real and non-zero
 
 Instructions to build and run :
 
