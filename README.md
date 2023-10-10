@@ -2,11 +2,9 @@
 ![CICD Workflow status](https://github.com/Rashmikapu/ENPM808X-Test-Driven-Development-/actions/workflows/run-unit-test-and-upload-codecov.yml/badge.svg) [![codecov](https://codecov.io/gh/Rashmikapu/ENPM808X-Test-Driven-Development-/branch/main/graph/badge.svg)](https://codecov.io/gh/Rashmikapu/ENPM808X-Test-Driven-Development-) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 
-
-Authors :
-
--- RASHMI KAPU (119461754)
--- NEHA MADHEKAR (119374436)
+## Part 1 Authors :
+Navigator: Neha Nitin Madhekar (NehaMadhekar09) <br>
+Driver: Rashmi Kapu (Rashmikapu)
 
 # UML Diagram
 ![Alt text](UML/UML1.jpg)
