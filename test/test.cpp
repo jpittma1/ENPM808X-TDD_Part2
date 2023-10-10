@@ -25,3 +25,6 @@ TEST(compute, this_should_pass_too) {
 TEST(check, this_should_always_pass) { 
  ASSERT_TRUE(pid_test.check(10.0)); 
 }
+TEST(check, this_should_always_pass) { 
+ ASSERT_FALSE(pid_test.check(-10.0)); 
+}
