@@ -60,7 +60,7 @@ PID_controller::PID_controller() {
  * @return true 
  * @return false 
  */
-bool PID_controller::check(double vel){
+bool PID_controller::check(double vel,double Kp,double Ki,double Kd,double initial_vel){
   if( Kp <=0 || Kd<=0||  Ki<=0 || deltaT <=0)
   {
     std::cout<<"ZeroValueExceptionError: Controller constants can't be Zero or Negative numbers"<<std::endl;
