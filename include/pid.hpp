@@ -42,5 +42,6 @@ class PID_controller{
    * @return double : Generated output velocity
    */
   double compute(double vel);
+  bool check(double vel);
 
 };
