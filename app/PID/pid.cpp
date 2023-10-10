@@ -53,23 +53,3 @@ PID_controller::PID_controller() {
   PID_controller::Ki = 0.01;
   PID_controller::initial_vel = 0.0;
 }
-/**
- * @brief Checking for Better error handling
- * 
- * @param vel 
- * @return true 
- * @return false 
- */
-bool PID_controller::check(double vel,double Kp,double Ki,double Kd,double initial_vel){
-  if( Kp <=0 || Kd<=0||  Ki<=0 || deltaT <=0)
-  {
-    std::cout<<"ZeroValueExceptionError: Controller constants can't be Zero or Negative numbers"<<std::endl;
-    return false;
-  }
-  if(initial_vel > vel)
-  {
-     std::cout<<"StateError: Current Velcoity higher than target"<<std::endl;
-    return false;
-  }
-  return true;
-}

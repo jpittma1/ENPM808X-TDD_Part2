@@ -22,12 +22,3 @@ TEST(compute, this_should_pass) {
 TEST(compute, this_should_pass_too) { 
   ASSERT_GT(pid_test.compute(100.0), 25.0); 
 }
-TEST(check, this_should_always_pass) { 
- ASSERT_TRUE(pid_test.check(10.0,1.0,2.0,1.0,0.9)); 
-}
-TEST(check, this_should_always_pass1) { 
- ASSERT_FALSE(pid_test.check(-10.0,1.0,2.0,1.0,0.9)); 
-}
-TEST(check, this_should_always_pass2) { 
- ASSERT_FALSE(pid_test.check(10.0,-1.0,-2.0,1.0,0.9)); 
-}
